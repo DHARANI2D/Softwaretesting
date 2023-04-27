@@ -1,0 +1,68 @@
+{
+  "id": "9eeb67be-6b58-41b2-a49c-36e30c6f7565",
+  "version": "2.0",
+  "name": "day:3:05",
+  "url": "https://demo.opencart.com/",
+  "tests": [{
+    "id": "f09e31e6-6790-439d-aef4-e15537b5afb7",
+    "name": "Untitled",
+    "commands": [{
+      "id": "fcd57384-f99d-4c41-9172-d8dc21aa4873",
+      "comment": "",
+      "command": "open",
+      "target": "https://demo.opencart.com/index.php?route=checkout/voucher&language=en-gb",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "7638e297-dad4-49d6-997d-46e22a517adf",
+      "comment": "",
+      "command": "executeScript",
+      "target": "window.scroll(0,500)",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "7abbafd0-6882-4e94-a72f-8737cc39071a",
+      "comment": "",
+      "command": "assertValue",
+      "target": "id=input-amount",
+      "targets": [],
+      "value": "1"
+    }, {
+      "id": "aac2876e-094d-4c54-b162-df886b7eef1f",
+      "comment": "",
+      "command": "click",
+      "target": "name=agree",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "279588ff-b9f3-40e9-931c-1bf715f129c3",
+      "comment": "",
+      "command": "click",
+      "target": "name=agree",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "b5982062-c2e3-49fa-8ea2-c6ad759cac04",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=.form-check-label:nth-child(1)",
+      "targets": [
+        ["css=.form-check-label:nth-child(1)", "css:finder"],
+        ["xpath=//form[@id='form-voucher']/div[8]/div/div/label", "xpath:idRelative"],
+        ["xpath=//div[8]/div/div/label", "xpath:position"],
+        ["xpath=//label[contains(.,'I understand that gift certificates are non-refundable')]", "xpath:innerText"]
+      ],
+      "value": "I understand that gift certificates are non-refundable "
+    }]
+  }],
+  "suites": [{
+    "id": "e03f9623-1afb-4969-8295-5f3705f22d7c",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["f09e31e6-6790-439d-aef4-e15537b5afb7"]
+  }],
+  "urls": ["https://demo.opencart.com/"],
+  "plugins": []
+}
